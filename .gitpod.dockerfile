@@ -5,8 +5,6 @@ USER root
 RUN apt-get update && apt-get install -y \
     # Install Heroku CLI
     && curl https://cli-assets.heroku.com/install.sh | sh \
-    # Install Postgres CLI psql
-    && sudo apt-get install -y postgresql postgresql-contrib \
     # Clean-up
     && sudo apt-get clean \
     && sudo rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/*
